@@ -17,16 +17,19 @@ namespace Log4jTest.Controllers
 
         public IActionResult Index()
         {
-            log.Info("Index page requested");
-            log.Debug("Debugging Index page");
-            log.Warn("Warning Index page");
-            log.Error("Error Index page");
+            Thread.Sleep(1000);
+            log.Info("Index page requested info()");
+            Thread.Sleep(1000);
             return View();
         }
 
         public IActionResult Privacy()
         {
-            log.Error("Error Index page");
+            Thread.Sleep(1000);
+            log.Debug("Debugging Index page debug()");
+            Thread.Sleep(1000);
+            log.Warn("Warning Index page warn()");
+            Thread.Sleep(1000);
             return View();
         }
 
